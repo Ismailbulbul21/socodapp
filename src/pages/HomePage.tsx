@@ -5,7 +5,7 @@ const cards = [
   {
     title: "Policy",
     description: "Understand what information Socod collects and how we use it responsibly.",
-    to: "/privacy",
+    to: "/policy",
     cta: "Read Policy"
   },
   {
@@ -39,8 +39,7 @@ export default function HomePage() {
         <section className="rounded-3xl bg-gradient-to-br from-brand-900 to-brand-700 p-6 text-white shadow-soft sm:p-10">
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Legal & Policies for Socod</h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-cyan-100 sm:text-base">
-            This website is the official legal and policy hub for Socod. Here you can read our Privacy
-            Policy, Terms of Service, Data Deletion process, and support Contact details in one place.
+            This website is the official legal and policy hub for Socod. Here you can read our Policy, Terms of Service, Data Deletion process, and support Contact details in one place.
           </p>
         </section>
 

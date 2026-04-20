@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
 import ContactPage from "./pages/ContactPage";
@@ -14,7 +14,8 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/policy" element={<PrivacyPage />} />
+        <Route path="/privacy" element={<Navigate to="/policy" replace />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/data-deletion" element={<DataDeletionPage />} />
         <Route path="/contact" element={<ContactPage />} />

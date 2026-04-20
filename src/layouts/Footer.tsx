@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-wrap items-start gap-x-4 gap-y-2 sm:justify-end">
           <Link to="/">Home</Link>
-          <Link to="/privacy">Policy</Link>
+          <Link to="/policy">Policy</Link>
           <Link to="/terms">Terms</Link>
           <Link to="/data-deletion">Data Deletion</Link>
           <Link to="/contact">Contact</Link>
