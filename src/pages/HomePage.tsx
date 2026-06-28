@@ -3,10 +3,10 @@ import Seo from "../components/Seo";
 
 const cards = [
   {
-    title: "Policy",
+    title: "Privacy Policy",
     description: "Understand what information Socod collects and how we use it responsibly.",
-    to: "/policy",
-    cta: "Read Policy"
+    to: "/privacy",
+    cta: "Read Privacy Policy"
   },
   {
     title: "Terms of Service",

@@ -18,10 +18,10 @@ export default function NotFoundPage() {
           Go to Home
         </Link>
         <Link
-          to="/policy"
+          to="/privacy"
           className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-800 no-underline transition hover:bg-slate-100"
         >
-          Policy
+          Privacy Policy
         </Link>
       </div>
     </main>

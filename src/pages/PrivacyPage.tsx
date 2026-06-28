@@ -2,142 +2,157 @@ import Section from "../components/Section";
 import { EFFECTIVE_DATE, LEGAL_ENTITY_NAME, SUPPORT_EMAIL } from "../content/constants";
 import LegalPageLayout from "../layouts/LegalPageLayout";
 
+const externalLinkClass =
+  "font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:text-brand-900";
+
 export default function PrivacyPage() {
   return (
     <LegalPageLayout
       title="Privacy Policy | Socod"
-      description="Privacy Policy for Socod step tracking and weekly walking competition app."
-      heading="Policy"
-      subheading={`Last updated: ${EFFECTIVE_DATE}`}
+      description="Privacy Policy for SocodApp, a walking and step tracking app with weekly competitions, squads, and group chat."
+      heading="Privacy Policy"
+      subheading={`Effective date: ${EFFECTIVE_DATE}`}
     >
-      <Section title="1. Who we are">
+      <Section title="1. About this policy">
         <p>
-          {LEGAL_ENTITY_NAME} operates Socod, a mobile app for step tracking, walking goals, group
-          interaction, and weekly walking competition rankings. This policy explains what personal
-          information we collect, why we collect it, and how we protect it.
+          This Privacy Policy explains how {LEGAL_ENTITY_NAME} (&ldquo;we&rdquo;, &ldquo;us&rdquo;) handles
+          your information when you use SocodApp, an Android walking and step tracker app with weekly step
+          competitions, squads, and group chat. We use clear, simple language so you can understand what we
+          collect and why.
         </p>
       </Section>
 
       <Section title="2. Information we collect">
+        <p>We collect the following information when you create an account and use the app:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li>
-            <strong>Account information:</strong> email address, password hash through authentication
-            services, and basic account identifiers.
+            <strong>Account information:</strong> your name, email address and/or phone number, gender, and
+            profile photo.
           </li>
           <li>
-            <strong>Profile information:</strong> name, phone number for reward payouts, gender, city, and
-            district.
+            <strong>Fitness data:</strong> your daily and weekly step counts, read from your device&rsquo;s
+            motion and step sensors.
           </li>
           <li>
-            <strong>Step and activity data:</strong> step counts and related sensor-based activity records
-            from supported device motion/pedometer features.
+            <strong>User content:</strong> messages and photos you share inside squads and group chat.
           </li>
           <li>
-            <strong>Goals, sessions, and progress:</strong> daily/weekly/monthly goals, session start/stop
-            events, and historical progress summaries.
+            <strong>Payout information:</strong> the mobile-money number you enter to receive prize money if
+            you win a competition. We support EVC, Zaad, and Sahal.
           </li>
           <li>
-            <strong>Group and chat content:</strong> text, images, voice messages, timestamps, and message
-            metadata used to deliver social features.
+            <strong>Device and advertising identifiers:</strong> your device&rsquo;s advertising ID and a
+            push-notification token used to send you alerts.
           </li>
           <li>
-            <strong>Device and diagnostics data:</strong> app version, crash logs, performance data, and
-            technical diagnostics.
-          </li>
-          <li>
-            <strong>Notification token:</strong> push notification token when you allow notifications.
-          </li>
-          <li>
-            <strong>Reward/payout data:</strong> phone-based payout details and payment reference metadata
-            when rewards are processed.
+            <strong>Usage and diagnostic data:</strong> basic information about how the app is performing,
+            such as crash reports, app version, and feature usage, used to keep the app stable.
           </li>
         </ul>
       </Section>
 
-      <Section title="3. How we use data">
+      <Section title="3. How we use your information">
         <ul className="list-disc space-y-2 pl-5">
-          <li>To create and manage your account and profile.</li>
-          <li>To run step tracking, goals, sessions, and weekly leaderboard competition features.</li>
-          <li>To validate step submissions with anti-cheat and fraud-prevention logic.</li>
-          <li>To keep the app secure, detect misuse, and support users.</li>
-          <li>To send notifications about rank changes, goal milestones, competition updates, and messages.</li>
+          <li>Track your steps and walking activity.</li>
+          <li>Run weekly step competitions and show leaderboards.</li>
+          <li>Power squads, group chat, and shared photos.</li>
+          <li>Send push notifications about competitions, rank changes, and messages.</li>
+          <li>Pay prize money to winners using the mobile-money number you provided.</li>
+          <li>Display ads inside the app.</li>
+          <li>Keep the app secure, prevent fraud and cheating, and fix bugs.</li>
         </ul>
       </Section>
 
-      <Section title="4. Legal bases for processing">
+      <Section title="4. Advertising">
         <p>
-          Depending on your location, we process personal data under one or more legal bases: your consent
-          (for optional features such as notifications), contract performance (providing core app features),
-          legitimate interests (security, anti-cheat, product reliability), and legal obligations (record
-          retention where required).
+          SocodApp shows advertisements through <strong>Google AdMob</strong>, an advertising service
+          operated by Google LLC. To serve and measure ads, AdMob collects and uses your device&rsquo;s
+          <strong> advertising ID</strong> along with other information allowed by Google&rsquo;s policies.
+        </p>
+        <p>You can learn more about how Google uses this information here:</p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <a
+              href="https://policies.google.com/technologies/ads"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={externalLinkClass}
+            >
+              How Google uses information for advertising
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://policies.google.com/technologies/partner-sites"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={externalLinkClass}
+            >
+              How Google uses information from sites and apps that use its services
+            </a>
+          </li>
+        </ul>
+        <p>
+          On Android you can reset or limit ad personalization at any time from your device settings under
+          <em> Google &rsaquo; Ads</em>.
         </p>
       </Section>
 
-      <Section title="5. Sharing with service providers">
+      <Section title="5. Third-party services we use">
+        <ul className="list-disc space-y-2 pl-5">
+          <li>
+            <strong>Supabase</strong> &mdash; provides our backend, user authentication, and database. Your
+            account information, fitness data, messages, and photos are stored on Supabase infrastructure.
+          </li>
+          <li>
+            <strong>Google AdMob (Google LLC)</strong> &mdash; serves ads inside the app and receives your
+            device&rsquo;s advertising ID for ad delivery and measurement.
+          </li>
+        </ul>
         <p>
-          We use third-party infrastructure providers to operate Socod. This includes Supabase services for
-          authentication, PostgreSQL database storage, file storage, and real-time features. We may also use
-          push notification providers, cloud storage/CDN tools, and analytics/error monitoring services when
-          needed to operate and improve the app.
-        </p>
-        <p>
-          Service providers are required to process data for approved business purposes and apply reasonable
-          security protections.
-        </p>
-      </Section>
-
-      <Section title="6. Data retention">
-        <p>
-          We retain data as long as needed to provide Socod services, maintain competition integrity,
-          resolve disputes, enforce terms, and meet legal obligations. Retention periods vary by data type.
-          When data is no longer needed, we delete or anonymize it when reasonably possible.
+          <strong>We do not sell your personal data</strong> to anyone.
         </p>
       </Section>
 
-      <Section title="7. International transfers">
+      <Section title="6. Security">
         <p>
-          Socod services may be hosted or processed in countries outside your own. When cross-border
-          transfers apply, we use reasonable safeguards designed to protect personal information in transit
-          and at rest.
+          Data sent between the app and our servers is transmitted over encrypted <strong>HTTPS</strong>. We
+          also use reasonable technical and organizational measures to protect your data from unauthorized
+          access, loss, or misuse. No system is 100% secure, but we work to keep your information safe.
         </p>
       </Section>
 
-      <Section title="8. Security practices">
+      <Section title="7. Data retention and your rights">
         <p>
-          We use technical and organizational measures such as access controls, encrypted transport,
-          monitoring, and logging to reduce risk of unauthorized access, loss, or misuse. No system is
-          completely secure, but we continuously improve our safeguards.
+          We keep your information for as long as your account is active and as needed to run competitions,
+          process prize payouts, prevent fraud, and meet legal obligations.
+        </p>
+        <p>
+          You can request deletion of your account and your personal data at any time by contacting us at
+          {" "}<strong>{SUPPORT_EMAIL}</strong>. Please include enough account detail (such as the email or
+          phone number used to sign in) so we can identify your account and process the request safely.
         </p>
       </Section>
 
-      <Section title="9. Children’s privacy">
+      <Section title="8. Children">
         <p>
-          Socod is not intended for children under 13. We do not knowingly collect personal data from
-          children under 13. If you believe a child has provided data, contact us so we can review and take
-          appropriate action.
+          SocodApp is <strong>not directed to children under 13</strong>. We do not knowingly collect
+          personal information from children under 13. If you believe a child has provided us with personal
+          information, please contact us and we will take appropriate steps to delete it.
         </p>
       </Section>
 
-      <Section title="10. Your rights">
+      <Section title="9. Changes to this policy">
         <p>
-          You may request access to your data, correction of inaccurate profile information, or deletion of
-          your account and associated data, subject to legal and operational limitations. You can submit
-          requests by contacting us at {SUPPORT_EMAIL}.
+          We may update this Privacy Policy from time to time. When we make material changes, we will
+          update the &ldquo;Effective date&rdquo; above and, where appropriate, notify you inside the app.
         </p>
       </Section>
 
-      <Section title="11. How to contact us">
+      <Section title="10. Contact us">
         <p>
-          For privacy questions, data rights requests, or complaints, email {SUPPORT_EMAIL}. Please include
-          enough account detail for us to identify and process your request safely.
-        </p>
-      </Section>
-
-      <Section title="12. Policy updates">
-        <p>
-          We may update this Privacy Policy to reflect product, legal, or operational changes. When we make
-          material updates, we will revise the “Last updated” date and may provide in-app or email notice
-          when appropriate.
+          If you have any questions about this Privacy Policy, your data, or you want to delete your
+          account, contact us at <strong>{SUPPORT_EMAIL}</strong>.
         </p>
       </Section>
     </LegalPageLayout>
